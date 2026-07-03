@@ -1,0 +1,16 @@
+.header{
+    background-color: brown;
+    color: aquamarine;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    box-shadow: 0 2px 8px rgb(red, green, blue);
+}
+.main-image{
+    height: 25 rem;
+    width: 100%;
+    overflow: hidden;
+}
