@@ -4,15 +4,15 @@ import classes from "./Cart.module.css"
 const Cart=(props)=>{
 
    const dummyCart=<ul className={classes.cartValue}>{[{id:"10",name:"Pizza",amount:"2",price:"$30.23"}].map((item)=>(
-    <li>{item.name}</li>
+    <li className={classes.name}>{item.name}</li>
    ))
 }</ul>
     return (
-        <Modal onClose={props.onCloseCart}>
+        <Modal onClose={props.onCloseCart} >
            {dummyCart}
-            <div className={classes.total}>
-                <span>Total</span>
-                <span>$ 36.7</span>
+            <div className={classes['total-price']}>
+                <span className={classes.total}>Total</span>
+                <span >$ 36.7</span>
             </div>
             <div className={classes.actions}>
                 <button className={classes.close} onClick={props.onCloseCart}>Close</button>

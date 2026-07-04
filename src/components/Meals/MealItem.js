@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from  "./MealItem.module.css";
 import Input from "../UI/Input";
+import CartContext from "../store/cart-context";
 const MealItem=(props)=>{
+    const ctx=useContext(CartContext);
+    const items={
+        id:props.id,
+        title:props.title,
+        price:props.price
+    }
+
+    const onFormSubmit=(event)=>{
+        event.preventDefault();
+     ctx.addItem(items);
+    }
+
 return (
     <div className={classes.oneMeal}>
         <div className={classes.mealItem}>
@@ -9,7 +22,7 @@ return (
         <p>{props.meal.description}</p>
         <h4 className={classes.price}>{props.meal.price}</h4>
         </div>
-        <form className={classes.form}>
+        <form className={classes.form} onSubmit={onFormSubmit}>
            <Input label="Amount " input={{
              id:props.meal.id,
              type:"number",
