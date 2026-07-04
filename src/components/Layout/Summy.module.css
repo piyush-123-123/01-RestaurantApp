@@ -1,0 +1,13 @@
+.summary{
+
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 50%;
+  left: 50%;
+  top: -5rem;
+  transform: translateX(-50%);
+  position: relative;
+  padding: 10px;
+  
+}

@@ -4,10 +4,10 @@ import classes from "./HeaderCartButton.module.css"
 
 const HeaderCartButton=(props)=>{
 return (
-    <button style={{width:"15%"}} className={classes.button}>
+    <button  className={classes.button}>
             <span className={classes.icon}><CartIcon /></span> 
             <span>Your Cart</span>
-            <span>{props.total}</span>
+            <span className={classes.badges}>3</span>
             </button>
 )
 

@@ -1,0 +1,24 @@
+.oneMeal{
+    display: flex;
+    align-items: center;
+
+}
+.mealItem{
+
+}
+.h3{
+    color: blue;
+}
+.price{
+    display: inline;
+}
+
+.form{
+    position: static;
+    margin-left: auto;
+}
+.button{
+    background-color: darkred;
+    color: white;
+    margin: auto;
+}

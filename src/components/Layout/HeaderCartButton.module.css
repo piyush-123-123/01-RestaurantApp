@@ -1,3 +1,24 @@
 .button{
+    font-weight:bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: brown;
+    border-radius: 25px;
+    color: white;
+    margin-right: 5rem;
+    width: 12%;
+}
+.button:hover,
+.button:active{
+    background-color: darkred;
+}
+.badges{
+    font-weight: bold;
+    background-color: darkred;
+    margin-left: 0.5rem;
+    padding: 0.25rem 1rem ;
+    border-radius: 25px;
     
 }
