@@ -1,24 +1,32 @@
 .oneMeal{
     display: flex;
     align-items: center;
-
+    border-bottom: double;
 }
-.mealItem{
 
-}
 .h3{
     color: blue;
 }
 .price{
     display: inline;
+
 }
 
 .form{
-    position: static;
+    
     margin-left: auto;
+    margin-right: 10px;
+    font-weight: bold;
+
 }
+
+
 .button{
     background-color: darkred;
     color: white;
+    width: 65%;
+    border-radius: 20px;
     margin: auto;
+    
+  
 }

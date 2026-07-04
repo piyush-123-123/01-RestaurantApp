@@ -6,7 +6,11 @@ const Meals=()=>{
         {id :1,title:"Shushi",description:"Finest fish",price:"$10"},
          {id:2,title:"Momos",description:"Finest dish",price:"$50"},
           {id:3,title:"Pizza",description:"Finest veggies",price:"$100"},
-           {id:4,title:"Siddu",description:"Flavours from himalayan",price:"$19"}
+           {id:4,title:"Siddu",description:"Flavours from himalayan",price:"$19"},
+            {id :5,title:"Shushi",description:"Finest fish",price:"$10"},
+         {id:6,title:"Momos",description:"Finest dish",price:"$50"},
+          {id:7,title:"Pizza",description:"Finest veggies",price:"$100"},
+           {id:8,title:"Siddu",description:"Flavours from himalayan",price:"$19"}
       ];
     return (
         <div>

@@ -7,7 +7,8 @@ import classes from "./AvailableMeals.module.css"
 const AvailableMeals=(props)=>{
 
     const mealList=props.availableMealList.map((item)=>(
-            <MealItem 
+      
+        <MealItem 
             key={item.id}
             meal={item}
             />
@@ -15,9 +16,11 @@ const AvailableMeals=(props)=>{
     ;
 
  return (
-    <div className={classes.meals}>
+    <div className={classes.meals}>    
      <Card>
+        <ul>
           {mealList}
+          </ul>
     </Card>
     </div>
     

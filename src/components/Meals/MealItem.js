@@ -1,5 +1,6 @@
 import React from "react";
 import classes from  "./MealItem.module.css";
+import Input from "../UI/Input";
 const MealItem=(props)=>{
 return (
     <div className={classes.oneMeal}>
@@ -9,12 +10,14 @@ return (
         <h4 className={classes.price}>{props.meal.price}</h4>
         </div>
         <form className={classes.form}>
-            <div>
-            <label name="amount">Amount</label>
-            <input name="amount" type="number "/>
-            </div>
-            <button type="submit" className={classes.button}>Add To Cart</button>
-
+           <Input label="Amount " input={{
+             id:props.meal.id,
+             type:"number",
+             min:'1',
+             max:'5',
+             defaultValue:'1'
+           }}/>
+            <button type="submit" className={classes.button}>+Add</button>
         </form>
     </div>
 
