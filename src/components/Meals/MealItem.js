@@ -5,13 +5,17 @@ import CartContext from "../store/cart-context";
 const MealItem=(props)=>{
     const ctx=useContext(CartContext);
     const items={
-        id:props.id,
-        title:props.title,
-        price:props.price
+        id : props.meal.id,
+        title:props.meal.title,
+        price:props.meal.price,
+        amount :1
     }
+    
 
     const onFormSubmit=(event)=>{
         event.preventDefault();
+        console.log("Clicked Add");
+        console.log(items);
      ctx.addItem(items);
     }
 
