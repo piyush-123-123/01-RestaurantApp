@@ -3,30 +3,34 @@ import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
 import CartContext from "../store/cart-context";
 import CartItem from "./CartItem";
-import Card from "../UI/Card";
 
 const Cart=(props)=>{
 
-   //const dummyCart=<ul className={classes.cartValue}>{[{id:"10",name:"Pizza",amount:"2",price:"$30.23"}].map((item)=>(
-    //<li className={classes.name}>{item.name}</li>
-  // ))
-//}</ul>
+   
  const ctx=useContext(CartContext);
   const totalPrice=ctx.items.reduce((acc,curr)=>{
-    return acc+Number(curr.price);
+    return acc+Number(curr.price)*curr.amount;
   },0);
 
     return (
         <Modal onClose={props.onCloseCart} >
-           <Card>
+           <ul className={classes.cartValue}>
             {ctx.items.map((item)=>(
                 <CartItem 
                 key={item.id}
                 item={item}
+                onAdd={()=>
+                    ctx.addItem({
+                        id:item.id,
+                        name:item.name,
+                        amount:1,
+                        price:item.price
+                    })
+                }
+               onRemove={()=>ctx.removeItem(item.id)}
                 />
             ))}
-          </Card>
-
+           </ul>
             <div className={classes['total-price']}>
                 <span className={classes.total}>Total</span>
                 <span >${totalPrice.toFixed(2)}</span>

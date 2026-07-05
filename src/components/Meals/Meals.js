@@ -3,10 +3,10 @@ import AvailableMeals from "./AvailableMeals";
 
 const Meals=()=>{
     const dummyMeals=[
-        {id :1,title:"Shushi",description:"Finest fish",price:10},
-         {id:2,title:"Momos",description:"Finest dish",price:20},
-          {id:3,title:"Pizza",description:"Finest veggies",price:100},
-           {id:4,title:"Siddu",description:"Flavours from himalayan",price:19},
+        {id :1,name:"Shushi",description:"Finest fish",price:10},
+         {id:2,name:"Momos",description:"Finest dish",price:20},
+          {id:3,name:"Pizza",description:"Finest veggies",price:100},
+           {id:4,name:"Siddu",description:"Flavours from himalayan",price:19},
        
       ];
     return (
